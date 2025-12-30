@@ -31,19 +31,17 @@ We provide our environment configuration as a reference:
 **Step 1: Prepare Dataset**
 Download the Vimeo90K dataset (septuplets) from [here](http://toflow.csail.mit.edu/). Unzip and ensure the directory is organized as:
 
-<details>
-<summary>Click to view directory structure</summary>
-
 ```text
 vimeo90k
 ├── GT
 │   ├── 00001
-│   │   ├── 0001      # Contains im0.png, im2.png ... im7.png
+│   │   ├── 0001      # Contains im0.png, im2.png ... im6.png
 │   │   └── ...
 │   └── ...
 ├── sep_trainlist.txt
 └── sep_testlist.txt
-</details>
+
+
 **Step 2: Run Training Script We provide a shell script for distributed training.**
 '''bash
 torchrun --nproc_per_node=4 --nnodes=1 --node_rank=0 pretrain.py --world_size 4 --batch_size 2 --data_path /path/to/Vimeo90K
