@@ -31,6 +31,7 @@ We provide our environment configuration as a reference:
 **Step 1: Prepare Dataset**
 Download the Vimeo90K dataset (septuplets) from [here](http://toflow.csail.mit.edu/). Unzip and ensure the directory is organized as:
 
+```text
 vimeo90k
 ├── GT
 │   ├── 00001
@@ -39,6 +40,7 @@ vimeo90k
 │   └── ...
 ├── sep_trainlist.txt
 └── sep_testlist.txt
+```
 
 **Step 2: Run Training Script We provide a shell script for distributed training.**
 '''bash
@@ -67,6 +69,7 @@ GOPRO, YouTube and Davis using online learning:
 python benchmark/online_sequence_test.py --path /path/to/(GOPRO/YouTube/Davis) --number 122/126/168 --save_path ./results/
 ```
 /path/to/(GOPRO/YouTube/Davis) should be organized as:
+```text
 /Your_Dataset_Path
 ├── scene_01
 │   ├── 00001.png   <-- Input Frame (t)
@@ -80,6 +83,6 @@ python benchmark/online_sequence_test.py --path /path/to/(GOPRO/YouTube/Davis) -
 │   ├── 0002.jpg
 │   └── ...
 └── ...
-
+```
 ## :heartpulse:	Acknowledgement
 We borrow some codes from [EMA-VFI](https://github.com/MCG-NJU/EMA-VFI), We thank the authors for their great work.
