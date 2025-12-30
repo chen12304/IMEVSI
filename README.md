@@ -9,7 +9,7 @@ This is the official implementation of the paper: **"IMEVSI: Online Adaptive Vid
 *Figure 1: performance and complexity of our method.*
 
 ![Network Architecture](fig/framework.png)
-*Figure 1: Overview of the proposed method.*
+*Figure 2: Overview of the proposed method.*
 
 ## 📢 News
 * **2025-12-30**: Code and pre-trained models are released.
