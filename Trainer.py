@@ -172,7 +172,7 @@ class Model:
             if img0!=None:
                 img0_down = F.interpolate(img0, scale_factor=down_scale, mode="bilinear", align_corners=False)
             img1_down = F.interpolate(img1, scale_factor=down_scale, mode="bilinear", align_corners=False)
-            flow, mask, _ ,self.af_down = self.net.calculate_flow_inference(img0_down, img1_down, af_down)
+            flow, mask, _ ,self.af_down = self.net.calculate_flow_inference(img0_down, img1_down, af_down,flow,mask)
             flow = F.interpolate(flow, scale_factor = 1/down_scale, mode="bilinear", align_corners=False) * (1/down_scale)
             mask = F.interpolate(mask, scale_factor = 1/down_scale, mode="bilinear", align_corners=False)
             self.af, _=self.net.get_afmf(img0, img1, af)
