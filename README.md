@@ -43,7 +43,7 @@ vimeo90k
 ```
 
 **Step 2: Run Training Script We provide a shell script for distributed training.**
-'''bash
+'''shell
 torchrun --nproc_per_node=4 --nnodes=1 --node_rank=0 pretrain.py --world_size 4 --batch_size 2 --data_path /path/to/Vimeo90K
 '''
 ## :runner:	Evaluation
