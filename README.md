@@ -43,9 +43,11 @@ vimeo90k
 ```
 
 **Step 2: Run Training Script We provide a shell script for distributed training.**
-'''shell
+
+```shell
 torchrun --nproc_per_node=4 --nnodes=1 --node_rank=0 pretrain.py --world_size 4 --batch_size 2 --data_path /path/to/Vimeo90K
-'''
+```
+
 ## :runner:	Evaluation
 1. Download the datasets you need:
 * [Xiph dataset](https://github.com/sniklaus/softmax-splatting/blob/master/benchmark_xiph.py)
