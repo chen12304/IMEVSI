@@ -201,4 +201,4 @@ if __name__ == "__main__":
                 print("Not loading" , k)
         model.net.load_state_dict(modelStateDict)
     
-    train(model, args.local_rank, args.batch_size, args.data_path, args.set, GPU_num, args.resume)
+    train(model, args.local_rank, args.batch_size, args.data_path, None, GPU_num, args.resume)
